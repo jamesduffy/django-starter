@@ -1,0 +1,13 @@
+# Core Django dependencies
+Django==5.1.1
+
+# Linting and formatting tools
+black==23.7.0
+isort==5.12.0
+
+# Test dependencies
+pytest==7.4.0
+pytest-django==4.5.2
+
+# Environment variable management
+python-dotenv==1.0.0

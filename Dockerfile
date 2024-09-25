@@ -6,10 +6,11 @@ WORKDIR /app
 
 # Copy the requirements file to the container.
 COPY requirements.txt .
+COPY constraints.txt .
 
 # Install the Python dependencies.
 RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+    pip install -r requirements.txt --constraint constraints.txt
 
 # Copy the rest of the application code to the container.
 COPY . .
