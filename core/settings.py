@@ -145,6 +145,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Django Constance
 CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 
-CONSTANCE_CONFIG = {
-    
-}
+CONSTANCE_CONFIG = {}
