@@ -25,6 +25,10 @@ ALLOWED_HOSTS = [
     env('HOSTNAME', 'localhost'),
 ]
 
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
 ENVIRONMENT = env("SENTRY_ENVIRONMENT", "local")
 
 if env("SENTRY_DSN", None):
@@ -62,6 +66,7 @@ INSTALLED_APPS = [
 
     # Third-party
     'constance',
+    'debug_toolbar',
 
     # Custom
 ]
@@ -74,6 +79,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
+    'core.middleware.set_secure_headers',
 ]
 
 ROOT_URLCONF = 'core.urls'

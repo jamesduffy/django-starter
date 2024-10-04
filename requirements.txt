@@ -1,6 +1,10 @@
 # Core Django dependencies
 Django==5.1.1
 
+# Additional Tools used in Django
+django-debug-toolbar==4.4.6
+secure==1.0.0
+
 # Linting and formatting tools
 black==23.7.0
 isort==5.12.0
@@ -18,3 +22,4 @@ environs==11.0.0
 gunicorn==23.0.0
 
 sentry-sdk==2.14.0
+
