@@ -70,6 +70,7 @@ INSTALLED_APPS = [
 
     # Custom
     'accounts',
+    'starter',
 ]
 
 MIDDLEWARE = [
@@ -118,6 +119,10 @@ DATABASES = {
 
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
