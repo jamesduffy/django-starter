@@ -1,14 +1,17 @@
 # Django Starter
+
+[![Test](https://github.com/jamesduffy/django-starter/actions/workflows/test.yml/badge.svg)](https://github.com/jamesduffy/django-starter/actions/workflows/test.yml)
+
 This repository serves as a starter template for any Django projects. It includes best practices and boilerplate code to kickstart development.
 
 ## Features
 - [ ] Django with PostgreSQL setup
 - [ ] Pre-configured settings for local development and production
 - [ ] Docker and Docker Compose setup
-- [ ] Integrated with Celery for background tasks
-- [ ] Pre-installed linting and formatting tools
-- [ ] GitHub Actions for CI/CD pipeline
-- [ ] .env support for environment variables
+- [x] Integrated with Celery for background tasks
+- [x] Pre-installed linting and formatting tools
+- [x] GitHub Actions for CI/CD pipeline
+- [x] .env support for environment variables
 
 ## Getting Started
 

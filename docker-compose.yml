@@ -29,6 +29,31 @@ services:
     image: redis:6
     restart: always
 
+  # Celery Worker
   celery:
     build: .
-    command: celery -A app_name worker --
+    command: celery -A core worker --loglevel=info
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    restart: always
+
+  # Celery Beat for periodic tasks
+  celery-beat:
+    build: .
+    command: celery -A core beat --loglevel=info
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    restart: always
+
+volumes:
+  postgres_data:

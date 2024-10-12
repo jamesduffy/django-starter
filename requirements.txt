@@ -16,10 +16,13 @@ pytest-django==4.5.2
 # Environment variable management
 python-dotenv==1.0.1
 
-
 django-constance==4.1.2
 environs==11.0.0
 gunicorn==23.0.0
 
 sentry-sdk==2.16.0
 
+# Background Jobs
+celery==5.4.0
+django-celery-beat==2.7.0
+django-celery-results==2.5.1

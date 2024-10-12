@@ -54,7 +54,6 @@ if env("SENTRY_DSN", None):
 
 
 # Application definition
-
 INSTALLED_APPS = [
     # Core
     'django.contrib.admin',
@@ -67,6 +66,7 @@ INSTALLED_APPS = [
     # Third-party
     'constance',
     'debug_toolbar',
+    'django_celery_beat',
 
     # Custom
     'accounts',
@@ -163,3 +163,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 
 CONSTANCE_CONFIG = {}
+
+
+# Celery Task Queue
+CELERY_BROKER_URL = 'redis://redis:6379/0'  # Use Django's ORM for task queueing
+CELERY_RESULT_BACKEND = 'django-db'  # Store task results in the database
+CELERY_CACHE_BACKEND = 'django-cache'  # Optional: If you want to cache results
+
+
+# Celery Beat Schedule
+# from celery.schedules import crontab
+CELERY_BEAT_SCHEDULE = {
+    'add-every-30-seconds': {
+        'task': 'starter.tasks.add',
+        'schedule': 30.0,  # Runs every 30 seconds
+        'args': (10, 20)
+    },
+}
