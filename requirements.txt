@@ -6,7 +6,7 @@ django-debug-toolbar==4.4.6
 secure==1.0.0
 
 # Linting and formatting tools
-black==23.7.0
+black==24.3.0
 isort==5.13.2
 
 # Test dependencies
