@@ -11,7 +11,7 @@ isort==5.13.2
 
 # Test dependencies
 pytest==8.3.3
-pytest-django==4.5.2
+pytest-django==4.9.0
 
 # Environment variable management
 python-dotenv==1.0.1
