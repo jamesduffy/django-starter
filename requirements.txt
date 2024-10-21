@@ -3,7 +3,7 @@ Django==5.1.2
 
 # Additional Tools used in Django
 django-debug-toolbar==4.4.6
-secure==1.0.0
+secure==1.0.1
 
 # Linting and formatting tools
 black==24.3.0
