@@ -20,7 +20,7 @@ django-constance==4.1.2
 environs==11.0.0
 gunicorn==23.0.0
 
-sentry-sdk==2.16.0
+sentry-sdk==2.19.2
 
 # Background Jobs
 celery==5.4.0
