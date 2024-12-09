@@ -33,7 +33,7 @@ python-crontab==3.2.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 secure==1.0.0
-sentry-sdk==2.16.0
+sentry-sdk==2.19.2
 six==1.16.0
 sqlparse==0.5.1
 tzdata==2024.2
